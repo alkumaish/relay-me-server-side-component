@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV === 'production') {
+  require('newrelic');
+}
 var express = require('express');
 var expressSession = require('express-session');
 var MongoStore = require('connect-mongo')(expressSession);
